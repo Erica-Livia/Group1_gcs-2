@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#Script that asks the user to type a phrase, 
+#Then tells the user the number of words in the phrase and white spaces
+
+
+# Asking the user to enter the phrase
+echo "Write a phrase"
+read text
+
+# Count words
+words=$(echo $text | wc -w)
+
+#Count number of whitespaces
+spaces=$(expr length "$text" - length `echo "$text" | sed "s/ //g"`)
+
+# Output
+echo "The number of words is $words"
+echo "The number of white spaces is $spaces"
