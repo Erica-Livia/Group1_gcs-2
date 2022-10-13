@@ -1,0 +1,18 @@
+#/usr/bin/env bash
+#Generating 2 random numbers
+num_1=$RANDOM
+num_2-$RANDOM
+
+#Generating the square root of the numbers
+sqrt_num1=$(echo "scale=0;sqrt($num_1)" | bc -l
+sqrt_num2=$(echo "scale=0;sqrt($num_2)" | bc -l
+
+#Getting the sum of the squares
+sum=$((sqrt_num1+$sqrt_num2))
+
+#Printing out the values
+echo "The first random number generated is $num_1"
+echo "The square root is $sqrt_num1"
+echo "The first random number generated is $num_2"
+echo "The square root is $sqrt_num2"
+echo "The sum of the square roots is $sum"
